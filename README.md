@@ -1,4 +1,4 @@
-# Train-Malta Workshop - Part 2
+# Train-Malta Nanopore Workshop - Part 2
 
 * [Working directory](#wd)
 * [FASTQ](#fastq)
