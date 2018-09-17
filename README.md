@@ -7,7 +7,7 @@
 * [Alignment QC](#aligment-qc)
 * [Variant calling](#vcalling)
 
-## Working directory
+## Working directory(#wd)
 
 Open your terminal, and go to your working directory, 
 
