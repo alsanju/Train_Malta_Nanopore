@@ -7,11 +7,17 @@
 
 ## Working directory
 
+Open your terminal, and go to your working directory, 
+
+```
+cd ~/Course_Materials/nanopore_practical/wd
+```
+
 ## FASTQ
 
-##Alignment
+## Alignment
 
-##Variant calling
+## Variant calling
 
 
 
