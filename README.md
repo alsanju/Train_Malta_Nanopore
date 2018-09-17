@@ -54,7 +54,6 @@ First we will get the read length for each read:
 
 ```
 awk '{if(NR%4==2) print length($1)}' ../data/fastq/NA12878.ROI.fastq > stats/read_length.txt
-less stats/read_length.txt
 ```
 
 And look at the read length distribution. For that, you can start R from the command-line:
@@ -68,6 +67,7 @@ and then, type the following:
 ```
 library(ggplot2)
 readLength <-  read.table("stats/read_length.txt", header=FALSE, col.names = "length")
+head(readLength)
 ggplot(data=readLength, aes(length)) + geom_histogram()
 ```
 
