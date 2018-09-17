@@ -25,11 +25,9 @@ mkdir variant_calling
 
 ## FASTQ
 
-The data we will be using is from NA12878 human genome reference standard on the Oxford Nanopore MinION using 1D ligation kits (450 bp/s) using R9.4 chemistry (FLO-MIN106). For more information: [https://github.com/nanopore-wgs-consortium/NA12878/blob/master/Genome.md]
+The data we will be using is from [NA12878](http://github.com/nanopore-wgs-consortium/NA12878/blob/master/Genome.md) human genome reference standard on the Oxford Nanopore MinION using 1D ligation kits (450 bp/s) using R9.4 chemistry (FLO-MIN106).
 
-We have already prepared a subset of specific regions of NA12878 genome in a FASTQ file. FASTQ format is a text-based format for storing both a biological sequence and its corresponding quality scores. A FASTQ file normally uses four lines per sequence: 1) begins with a ‘@’ and is followed by a sequence identifier, 2) is the raw sequence letters, 3) begins with a ‘+’ character, 4) encodes the quality values for the sequence in Line 2.
-
-For more information about the format: [http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2847217]
+We have already prepared a subset of specific regions of NA12878 genome in a FASTQ file. [FASTQ](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2847217) format is a text-based format for storing both a biological sequence and its corresponding quality scores. A FASTQ file normally uses four lines per sequence: 1) begins with a ‘@’ and is followed by a sequence identifier, 2) is the raw sequence letters, 3) begins with a ‘+’ character, 4) encodes the quality values for the sequence in Line 2.
 
 How many reads do we have?
 
@@ -61,10 +59,10 @@ ggplot(data=readLength, aes(length)) + geom_histogram()
 
 ## Alignment
 
-The standard format for aligned sequence data is SAM (Sequence Alignment Map). SAM files have 1) a header that contains information on alignment and contigs used, and 2) the aligned reads. But because SAM files can be large, they are usually stored in the compressed version of them, BAM files. For more information about the SAM/BAM formats: [http://samtools.github.io/hts-specs/SAMv1.pdf]
+The standard format for aligned sequence data is [SAM](http://samtools.github.io/hts-specs/SAMv1.pdf) (Sequence Alignment Map). SAM files have 1) a header that contains information on alignment and contigs used, and 2) the aligned reads. But because SAM files can be large, they are usually stored in the compressed version of them, [BAM](http://samtools.github.io/hts-specs/SAMv1.pdf) files.
 
 Multiple algorithms have been developed to align long reads to a genome of reference. Some examples are:
--	Graphmap: [http://github.com/isovic/graphmap]
+-	Graphmap: (http://github.com/isovic/graphmap)
 -	bwa mem -x l ont2d: [http://github.com/lh3/bwa]
 -	LAST: [http://last.cbrc.jp/]
 -	NGMLR: [http://github.com/philres/ngmlr]
@@ -134,12 +132,12 @@ You can also add a vertical line to the previous plot intercepting the median co
 p + geom_vline(xintercept=median(coverage$cov), colour = "purple")
 ```
 
-However, this is a very specific subset, and is not a representation of the coverage of NA12878’s genome. If you want to compare this with the coverage distribution across the whole genome, you can do the same but for the file ../NA12878_WGcoverage.txt.
+However, this is a very specific subset, and is not a representation of the coverage of NA12878’s genome. If you want to compare this with the coverage distribution across the whole genome, you can do the same steps but for the [NA12878](http://github.com/nanopore-wgs-consortium/NA12878/blob/master/Genome.md) entire genome.
 
 
 ## Variant calling
 
-Variants are called and stored in VCF format. This contains a header, and then data lines each containing information about a position in the genome. For more information about the VCF format: [http://samtools.github.io/hts-specs/VCFv4.2.pdf]
+Variants are called and stored in [VCF](http://samtools.github.io/hts-specs/VCFv4.2.pdf) format. This contains a header, and then data lines each containing information about a position in the genome.
 
 Currently, there are different algorithms for calling SVs from long-read sequencing data, including:
 -	Sniffles: best used with NGMLR. 
