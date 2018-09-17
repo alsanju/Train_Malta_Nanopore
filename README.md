@@ -1,4 +1,4 @@
-# Train-Malta workshop - Part 2
+# Train-Malta Workshop - Part 2
 
 * [Working directory](#wd)
 * [FASTQ](#FASTQ)
