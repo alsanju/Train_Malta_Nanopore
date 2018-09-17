@@ -37,7 +37,7 @@ How many reads do we have?
 awk '{s++}END{print s/4}' ../data/fastq/NA12878.ROI.fastq
 ```
 
-## Reads Quality Control
+## Reads QC
 
 First we will get the read length for each read:
 
