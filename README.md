@@ -56,8 +56,7 @@ and then, type the following:
 ```
 library(ggplot2)
 readLength <-  read.table("stats/read_length.txt", header=FALSE, col.names = "length")
-p <- ggplot(data=readLength, aes(length)) + geom_histogram()
-ggsave(plot = p, filename = "plots/read_length_distribution.png")
+ggplot(data=readLength, aes(length)) + geom_histogram()
 ```
 
 ## Alignment
@@ -74,7 +73,7 @@ Multiple algorithms have been developed to align long reads to a genome of refer
 Here we will use NGMLR. First we will map the reads to the genome of reference (GRCh37), and convert the SAM output to BAM format.
 
 ```
-ngmlr -r $ref -q ../data/fastq/NA12878.ROI.fastq -o alignment/NA12878.ROI.sam
+ngmlr -r ~/Course_Materials/human_g1k_v37.fasta.gz -q ../data/fastq/NA12878.ROI.fastq -o alignment/NA12878.ROI.sam
 samtools view alignment/NA12878.ROI.sam -O BAM -o alignment/NA12878.ROI.bam
 ```
 
