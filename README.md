@@ -66,7 +66,7 @@ and then, type the following:
 
 ```
 library(ggplot2)
-readLength <-  read.table("stats/read_length.txt", header=FALSE, col.names = "length")
+readLength <- read.table("stats/read_length.txt", header=FALSE, col.names = "length")
 head(readLength)
 ggplot(data=readLength, aes(length)) + geom_histogram()
 ```
