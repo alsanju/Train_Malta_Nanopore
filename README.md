@@ -1,11 +1,11 @@
 # Train-Malta Workshop - Part 2
 
-* [Working directory](#Working directory)
+* [Working directory](#Working-directory)
 * [FASTQ](#FASTQ)
-* [Reads QC](#Reads QC)
+* [Reads QC](#Reads-QC)
 * [Alignment](#Alignment)
-* [Alignment QC](#Alignment QC)
-* [Variant calling](#Variant calling)
+* [Alignment QC](#Alignment-QC)
+* [Variant calling](#Variant-calling)
 
 ## Working directory
 
