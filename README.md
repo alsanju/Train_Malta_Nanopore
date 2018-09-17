@@ -172,4 +172,4 @@ grep DEL variant_calling/NA12878.ROI.vcf
 
 -	How many deletions are real?
 -	How many SVs breakpoint junctions are within repetitive sequences?
--	For that, you would need to load Repeatmasker from server (File > Load from server > Annotations > Variation and Repeats > Repeat Masker)
+     - For that, you would need to load Repeatmasker from server (File > Load from server > Annotations > Variation and Repeats > Repeat Masker)
