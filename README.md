@@ -129,7 +129,7 @@ p
 You can also add a vertical line to the previous plot intercepting the median coverage:
 
 ```
-p + geom_vline(xintercept=median(coverage$cov), colour = "purple")
+p + geom_vline(xintercept=median(coverage$cov), colour = "red")
 ```
 
 However, this is a very specific subset, and is not a representation of the coverage of NA12878’s genome. If you want to compare this with the coverage distribution across the whole genome, you can do the same steps but for the [NA12878](http://github.com/nanopore-wgs-consortium/NA12878/blob/master/Genome.md) entire genome.
