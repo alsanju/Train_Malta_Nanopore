@@ -167,8 +167,9 @@ bcftools view -H variant_calling/NA12878.ROI.vcf | wc -l
 Finally, we will inspect the deletions in IGV: 
 
 ```
-grep DEL variant_calling/NA12878.ROI.vcf
+../scripts/vcf2tab.py variant_calling/NA12878.ROI.vcf | grep DEL
 ```
+
 
 -	How many deletions are real?
 -	How many SVs breakpoint junctions are within repetitive sequences?
