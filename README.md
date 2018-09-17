@@ -157,8 +157,8 @@ However, this is a very specific subset, and is not a representation of the cove
 Variants are called and stored in [VCF](http://samtools.github.io/hts-specs/VCFv4.2.pdf) format. This contains a header, and then data lines each containing information about a position in the genome.
 
 Currently, there are different algorithms for calling SVs from long-read sequencing data, including:
--	Sniffles: best used with NGMLR. 
--	NanoSV: best used with LAST.
+-	[Sniffles](http://github.com/fritzsedlazeck/Sniffles): best used with NGMLR. 
+-	[NanoSV](http://github.com/philres/ngmlr): best used with LAST.
 
 Since we used NGMLR for the alignment, now we will use sniffles for calling structural variants.
 
