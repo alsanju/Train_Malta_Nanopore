@@ -160,6 +160,8 @@ However, this is a very specific subset, and is not a representation of the cove
 
 Variants are called and stored in [VCF](http://samtools.github.io/hts-specs/VCFv4.2.pdf) format. This contains a header, and then data lines each containing information about a position in the genome.
 
+<img src="//raw.githubusercontent.com/alsanju/train_malta_nanopore/master/images/vcf.jpg" alt="img_3" class="inline"/>
+
 Currently, there are different algorithms for calling SVs from long-read sequencing data, including:
 -	[Sniffles](http://github.com/fritzsedlazeck/Sniffles): best used with NGMLR. 
 -	[NanoSV](http://github.com/philres/ngmlr): best used with LAST.
