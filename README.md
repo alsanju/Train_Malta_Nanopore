@@ -164,12 +164,13 @@ To know how many SVs have been called, we will run:
 bcftools view -H variant_calling/NA12878.ROI.vcf | wc -l
 ```
 
-Finally, we will inspect the deletions in IGV: 
+Finally, you can convert the VCF to a tab format:
 
 ```
-../scripts/vcf2tab.py variant_calling/NA12878.ROI.vcf | grep DEL
+../scripts/vcf2tab.py variant_calling/NA12878.ROI.vcf
 ```
 
+and inspect the deletions in IGV.
 
 -	How many deletions are real?
 -	How many SVs breakpoint junctions are within repetitive sequences?
