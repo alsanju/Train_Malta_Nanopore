@@ -29,6 +29,7 @@ The data we will be using is from [NA12878](http://github.com/nanopore-wgs-conso
 We have already prepared a subset of specific regions of NA12878 genome in a FASTQ file. [FASTQ](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2847217) format is a text-based format for storing both a biological sequence and its corresponding quality scores.
 
 A FASTQ file normally uses four lines per sequence: 
+
     1) begins with a ‘@’ and is followed by a sequence identifier, 
     2) is the raw sequence letters, 
     3) begins with a ‘+’ character, 
