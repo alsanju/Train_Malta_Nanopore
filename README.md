@@ -25,11 +25,11 @@ mkdir variant_calling
 
 ## FASTQ
 
-The data we will be using is from NA12878 human genome reference standard on the Oxford Nanopore MinION using 1D ligation kits (450 bp/s) using R9.4 chemistry (FLO-MIN106). For more information: https://github.com/nanopore-wgs-consortium/NA12878/blob/master/Genome.md
+The data we will be using is from NA12878 human genome reference standard on the Oxford Nanopore MinION using 1D ligation kits (450 bp/s) using R9.4 chemistry (FLO-MIN106). For more information: [https://github.com/nanopore-wgs-consortium/NA12878/blob/master/Genome.md]
 
 We have already prepared a subset of specific regions of NA12878 genome in a FASTQ file. FASTQ format is a text-based format for storing both a biological sequence and its corresponding quality scores. A FASTQ file normally uses four lines per sequence: 1) begins with a ‘@’ and is followed by a sequence identifier, 2) is the raw sequence letters, 3) begins with a ‘+’ character, 4) encodes the quality values for the sequence in Line 2.
 
-For more information about the format: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2847217
+For more information about the format: [http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2847217]
 
 How many reads do we have?
 
@@ -61,14 +61,14 @@ ggplot(data=readLength, aes(length)) + geom_histogram()
 
 ## Alignment
 
-The standard format for aligned sequence data is SAM (Sequence Alignment Map). SAM files have 1) a header that contains information on alignment and contigs used, and 2) the aligned reads. But because SAM files can be large, they are usually stored in the compressed version of them, BAM files. For more information about the SAM/BAM formats: http://samtools.github.io/hts-specs/SAMv1.pdf
+The standard format for aligned sequence data is SAM (Sequence Alignment Map). SAM files have 1) a header that contains information on alignment and contigs used, and 2) the aligned reads. But because SAM files can be large, they are usually stored in the compressed version of them, BAM files. For more information about the SAM/BAM formats: [http://samtools.github.io/hts-specs/SAMv1.pdf]
 
 Multiple algorithms have been developed to align long reads to a genome of reference. Some examples are:
--	Graphmap: http://github.com/isovic/graphmap
--	bwa mem -x l ont2d: http://github.com/lh3/bwa
--	LAST: http://last.cbrc.jp/
--	NGMLR: http://github.com/philres/ngmlr
--	minimap2: http://github.com/lh3/minimap2
+-	Graphmap: [http://github.com/isovic/graphmap]
+-	bwa mem -x l ont2d: [http://github.com/lh3/bwa]
+-	LAST: [http://last.cbrc.jp/]
+-	NGMLR: [http://github.com/philres/ngmlr]
+-	minimap2: [http://github.com/lh3/minimap2]
 
 Here we will use NGMLR. First we will map the reads to the genome of reference (GRCh37), and convert the SAM output to BAM format.
 
@@ -146,7 +146,7 @@ However, this is a very specific subset, and is not a representation of the cove
 
 ## Variant calling
 
-Variants are called and stored in VCF format. This contains a header, and then data lines each containing information about a position in the genome. For more information about the VCF format: http://samtools.github.io/hts-specs/VCFv4.2.pdf
+Variants are called and stored in VCF format. This contains a header, and then data lines each containing information about a position in the genome. For more information about the VCF format: [http://samtools.github.io/hts-specs/VCFv4.2.pdf]
 
 Currently, there are different algorithms for calling SVs from long-read sequencing data, including:
 -	Sniffles: best used with NGMLR. 
@@ -165,7 +165,7 @@ sniffles -m alignment/NA12878.ROI.sort.bam -v variant_calling/NA12878.ROI.s20.vc
 ```
 
 The information that is provided in sniffles’s output can be found in:
-http://github.com/fritzsedlazeck/Sniffles/wiki/Output
+[http://github.com/fritzsedlazeck/Sniffles/wiki/Output]
 
 To know how many SVs have been called, we will run:
 
