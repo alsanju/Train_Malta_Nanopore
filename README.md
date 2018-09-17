@@ -62,11 +62,11 @@ ggplot(data=readLength, aes(length)) + geom_histogram()
 The standard format for aligned sequence data is [SAM](http://samtools.github.io/hts-specs/SAMv1.pdf) (Sequence Alignment Map). SAM files have 1) a header that contains information on alignment and contigs used, and 2) the aligned reads. But because SAM files can be large, they are usually stored in the compressed version of them, [BAM](http://samtools.github.io/hts-specs/SAMv1.pdf) files.
 
 Multiple algorithms have been developed to align long reads to a genome of reference. Some examples are:
--	Graphmap: (http://github.com/isovic/graphmap)
--	bwa mem -x l ont2d: [http://github.com/lh3/bwa]
--	LAST: [http://last.cbrc.jp/]
--	NGMLR: [http://github.com/philres/ngmlr]
--	minimap2: [http://github.com/lh3/minimap2]
+-	Graphmap: [http://github.com/isovic/graphmap](http://github.com/isovic/graphmap)
+-	bwa mem -x l ont2d: [http://github.com/lh3/bwa](http://github.com/lh3/bwa)
+-	LAST: [http://last.cbrc.jp](http://last.cbrc.jp)
+-	NGMLR: [http://github.com/philres/ngmlr](http://github.com/philres/ngmlr)
+-	minimap2: [http://github.com/lh3/minimap2](http://github.com/lh3/minimap2)
 
 Here we will use NGMLR. First we will map the reads to the genome of reference (GRCh37), and convert the SAM output to BAM format.
 
@@ -156,7 +156,7 @@ sniffles -m alignment/NA12878.ROI.sort.bam -v variant_calling/NA12878.ROI.s20.vc
 ```
 
 The information that is provided in sniffles’s output can be found in:
-[http://github.com/fritzsedlazeck/Sniffles/wiki/Output]
+[http://github.com/fritzsedlazeck/Sniffles/wiki/Output](http://github.com/fritzsedlazeck/Sniffles/wiki/Output)
 
 To know how many SVs have been called, we will run:
 
