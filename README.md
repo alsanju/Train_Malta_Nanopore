@@ -27,7 +27,13 @@ mkdir variant_calling
 
 The data we will be using is from [NA12878](http://github.com/nanopore-wgs-consortium/NA12878/blob/master/Genome.md) human genome reference standard on the Oxford Nanopore MinION using 1D ligation kits (450 bp/s) using R9.4 chemistry (FLO-MIN106).
 
-We have already prepared a subset of specific regions of NA12878 genome in a FASTQ file. [FASTQ](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2847217) format is a text-based format for storing both a biological sequence and its corresponding quality scores. A FASTQ file normally uses four lines per sequence: 1) begins with a ‘@’ and is followed by a sequence identifier, 2) is the raw sequence letters, 3) begins with a ‘+’ character, 4) encodes the quality values for the sequence in Line 2.
+We have already prepared a subset of specific regions of NA12878 genome in a FASTQ file. [FASTQ](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2847217) format is a text-based format for storing both a biological sequence and its corresponding quality scores.
+
+A FASTQ file normally uses four lines per sequence: 
+    1) begins with a ‘@’ and is followed by a sequence identifier, 
+    2) is the raw sequence letters, 
+    3) begins with a ‘+’ character, 
+    4) encodes the quality values for the sequence in Line 2.
 
 How many reads do we have?
 
@@ -57,9 +63,21 @@ readLength <-  read.table("stats/read_length.txt", header=FALSE, col.names = "le
 ggplot(data=readLength, aes(length)) + geom_histogram()
 ```
 
+For quitting R, just type:
+
+```
+quit()
+```
+
 ## Alignment
 
-The standard format for aligned sequence data is [SAM](http://samtools.github.io/hts-specs/SAMv1.pdf) (Sequence Alignment Map). SAM files have 1) a header that contains information on alignment and contigs used, and 2) the aligned reads. But because SAM files can be large, they are usually stored in the compressed version of them, [BAM](http://samtools.github.io/hts-specs/SAMv1.pdf) files.
+The standard format for aligned sequence data is [SAM](http://samtools.github.io/hts-specs/SAMv1.pdf) (Sequence Alignment Map). 
+
+SAM files have 
+    1) a header that contains information on alignment and contigs used, and 
+    2) the aligned reads. 
+
+But because SAM files can be large, they are usually stored in the compressed version of them, [BAM](http://samtools.github.io/hts-specs/SAMv1.pdf) files.
 
 Multiple algorithms have been developed to align long reads to a genome of reference. Some examples are:
 -	Graphmap: [http://github.com/isovic/graphmap](http://github.com/isovic/graphmap)
