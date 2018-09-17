@@ -17,7 +17,6 @@ cd ~/Course_Materials/nanopore_practical/wd
 and create the following directory structure:
 
 ```
-mkdir plots
 mkdir stats
 mkdir alignment
 mkdir variant_calling
