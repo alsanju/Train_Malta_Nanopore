@@ -36,6 +36,12 @@ A FASTQ file normally uses four lines per sequence:
  3) Begins with a ‘+’ character 
  4) Encodes the quality values for the sequence in Line 2
 
+You can visualize the FASTQ file typing:
+
+```
+less ../data/fastq/NA12878.ROI.fastq
+```
+
 How many reads do we have?
 
 ```
@@ -48,6 +54,7 @@ First we will get the read length for each read:
 
 ```
 awk '{if(NR%4==2) print length($1)}' ../data/fastq/NA12878.ROI.fastq > stats/read_length.txt
+less stats/read_length.txt
 ```
 
 And look at the read length distribution. For that, you can start R from the command-line:
@@ -104,6 +111,12 @@ Finally we will index the BAM file to run samtools subtools later.
 
 ```
 samtools index alignment/NA12878.ROI.sort.bam
+```
+
+To visualise the BAM file:
+
+```
+samtools view alignment/NA12878.ROI.sort.bam | less -S
 ```
 
 ## Alignment QC
