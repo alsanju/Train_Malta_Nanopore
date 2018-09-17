@@ -75,15 +75,14 @@ quit()
 The standard format for aligned sequence data is [SAM](http://samtools.github.io/hts-specs/SAMv1.pdf) (Sequence Alignment Map). 
 
 SAM files have: 
- 1) A header that contains information on alignment and contigs used, and 
+
+1) A header that contains information on alignment and contigs used
  
 <img src="//raw.githubusercontent.com/alsanju/train_malta_nanopore/master/images/sam1.png" alt="img_2" class="inline"/>
 
- 2) The aligned reads.
+ 2) The aligned reads
 
 <img src="//raw.githubusercontent.com/alsanju/train_malta_nanopore/master/images/sam2.png" alt="img_2" class="inline"/>
-
-
 
 But because SAM files can be large, they are usually stored in the compressed version of them, [BAM](http://samtools.github.io/hts-specs/SAMv1.pdf) files.
 
