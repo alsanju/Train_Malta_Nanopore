@@ -118,27 +118,20 @@ and then, type the following:
 ```
 library(ggplot2)
 coverage <-  read.table("stats/coverage.txt", header=FALSE, col.names = c("chrom", "pos", "cov"))
-```
-
--	Which is the maximum coverage?
--	Which is the average coverage?
-
-```
-cov_percent <- data.frame(  "cov" = seq(1,max(coverage$cov)), 
+cov_percent <- data.frame(  "cov" = seq(1,max(coverage$cov)) 
                           , "percent" = sapply(seq(1,max(coverage$cov)), function(x) nrow(coverage[coverage$cov >= x,])/nrow(coverage)))
 p <- ggplot(cov_percent, aes(x = cov, y = percent)) + 
      geom_line() + 
      scale_x_continuous(breaks=seq(0,max(coverage$cov), 10)) + 
      xlab("Coverage") + 
      ylab("Percentage of bases")
-ggsave(plot = p, filename = "plots/coverage_distribution.png")
+p
 ```
 
 You can also add a vertical line to the previous plot intercepting the median coverage:
 
 ```
-p2 <- p + geom_vline(xintercept=median(coverage$cov), colour = "purple")
-ggsave(plot = p2, filename = "plots/coverage_distribution_median.png")
+p + geom_vline(xintercept=median(coverage$cov), colour = "purple")
 ```
 
 However, this is a very specific subset, and is not a representation of the coverage of NA12878’s genome. If you want to compare this with the coverage distribution across the whole genome, you can do the same but for the file ../NA12878_WGcoverage.txt.
