@@ -7,7 +7,7 @@
 * [Alignment QC](#aligment-qc)
 * [Variant calling](#vcalling)
 
-## Working directory(#wd)
+## Working directory
 
 Open your terminal, and go to your working directory, 
 
@@ -145,7 +145,7 @@ ggsave(plot = p2, filename = "plots/coverage_distribution_median.png")
 However, this is a very specific subset, and is not a representation of the coverage of NA12878’s genome. If you want to compare this with the coverage distribution across the whole genome, you can do the same but for the file ../NA12878_WGcoverage.txt.
 
 
-## Variant calling (#vcalling)
+## Variant calling
 
 Variants are called and stored in VCF format. This contains a header, and then data lines each containing information about a position in the genome. For more information about the VCF format: http://samtools.github.io/hts-specs/VCFv4.2.pdf
 
